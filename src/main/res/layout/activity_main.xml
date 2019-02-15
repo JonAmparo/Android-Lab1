@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/secretBtn"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/buttons"
+        android:text="Tip Calculator"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/backBtn"
+        app:layout_constraintEnd_toEndOf="@+id/boxIV"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toEndOf="@+id/backBtn" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="164dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/buttons"
+        android:text="Color Switcher"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/boxIV"
+        app:layout_constraintEnd_toEndOf="@+id/boxIV"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/boxIV"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.322" />
+
+    <Button
+        android:id="@+id/aboutBtn"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/buttons"
+        android:text="About Me"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/backBtn"
+        app:layout_constraintEnd_toStartOf="@+id/backBtn"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/boxIV" />
+
+    <ImageView
+        android:id="@+id/boxIV"
+        android:layout_width="0dp"
+        android:layout_height="336dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/boxes" />
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="121dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Jonathan Amparo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/boxIV"
+        app:layout_constraintEnd_toEndOf="@+id/secretBtn"
+        app:layout_constraintStart_toStartOf="@+id/secretBtn"
+        app:layout_constraintTop_toBottomOf="@+id/secretBtn"
+        app:layout_constraintVertical_bias="0.745" />
+
+    <TextView
+        android:id="@+id/dateTV"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="8dp"
+        android:text="February 14. 2019"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/boxIV"
+        app:layout_constraintEnd_toEndOf="@+id/aboutBtn"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="@+id/aboutBtn"
+        app:layout_constraintTop_toBottomOf="@+id/aboutBtn"
+        app:layout_constraintVertical_bias="0.477" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/boxIV"
+        app:layout_constraintStart_toStartOf="@+id/boxIV"
+        app:layout_constraintTop_toTopOf="@+id/boxIV"
+        app:srcCompat="@drawable/herzingtext" />
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ColorSwitcher">
+
+    <ImageView
+        android:id="@+id/boxIV"
+        android:layout_width="0dp"
+        android:layout_height="460dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/boxes" />
+
+    <CheckBox
+        android:id="@+id/includeTaxesCB"
+        style="@android:style/Widget.DeviceDefault.CompoundButton.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@android:color/white"
+        android:text="Green"
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/blueCB"
+        app:layout_constraintEnd_toEndOf="@+id/boxIV"
+        app:layout_constraintStart_toStartOf="@+id/boxIV" />
+
+    <ImageView
+        android:id="@+id/colorSwitcherIV"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/colorswitcher"
+        app:layout_constraintEnd_toEndOf="@+id/boxIV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/boxIV"
+        app:layout_constraintTop_toTopOf="@+id/boxIV" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupRG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorSwitcherIV">
+
+        <RadioButton
+            android:id="@+id/redRB"
+            style="@android:style/Widget.DeviceDefault.CompoundButton.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:buttonTint="@android:color/white"
+            android:text="Red"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/greenRB"
+            app:layout_constraintEnd_toStartOf="@+id/greenRB"
+            app:layout_constraintHorizontal_bias="0.797"
+            app:layout_constraintStart_toStartOf="@+id/boxIV" />
+
+        <RadioButton
+            android:id="@+id/greenRB"
+            style="@android:style/Widget.DeviceDefault.CompoundButton.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@android:color/white"
+            android:text="Green"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/blueRB"
+            app:layout_constraintEnd_toEndOf="@+id/boxIV"
+            app:layout_constraintStart_toStartOf="@+id/boxIV" />
+
+        <RadioButton
+            android:id="@+id/blueRB"
+            style="@android:style/Widget.DeviceDefault.CompoundButton.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:buttonTint="@android:color/white"
+            android:text="Blue"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.165"
+            app:layout_constraintStart_toEndOf="@+id/greenRB"
+            tools:layout_editor_absoluteY="574dp" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/redCB"
+        style="@android:style/Widget.DeviceDefault.CompoundButton.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="8dp"
+        android:buttonTint="@android:color/white"
+        android:text="Red"
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/includeTaxesCB"
+        app:layout_constraintEnd_toStartOf="@+id/includeTaxesCB"
+        app:layout_constraintStart_toStartOf="@+id/radioGroupRG" />
+
+    <CheckBox
+        android:id="@+id/blueCB"
+        style="@android:style/Widget.DeviceDefault.CompoundButton.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="32dp"
+        android:buttonTint="@android:color/white"
+        android:text="Blue"
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/backBtn"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroupRG"
+        app:layout_constraintStart_toEndOf="@+id/includeTaxesCB" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="138dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/buttons"
+        android:text="Back"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/boxIV"
+        app:layout_constraintEnd_toEndOf="@+id/boxIV"
+        app:layout_constraintStart_toStartOf="@+id/boxIV" />
+
+</android.support.constraint.ConstraintLayout>
