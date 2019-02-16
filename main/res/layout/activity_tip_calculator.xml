@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TipCalculator">
+
+    <ImageView
+        android:id="@+id/boxIV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/boxes" />
+
+    <ImageView
+        android:id="@+id/tipCalculatorIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/boxIV"
+        app:layout_constraintStart_toStartOf="@+id/boxIV"
+        app:layout_constraintTop_toTopOf="@+id/boxIV"
+        app:srcCompat="@drawable/tipcalculator" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="64dp" />
+
+    <TextView
+        android:id="@+id/billTV"
+        style="@android:style/Widget.DeviceDefault.TextView.SpinnerItem"
+        android:layout_width="194dp"
+        android:layout_height="wrap_content"
+        android:text="Bill (Before Taxes)"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tipCalculatorIV" />
+
+    <EditText
+        android:id="@+id/billTXT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/boxIV"
+        app:layout_constraintStart_toStartOf="@+id/billTV"
+        app:layout_constraintTop_toBottomOf="@+id/billTV" />
+
+    <TextView
+        android:id="@+id/gstTV"
+        style="@android:style/Widget.DeviceDefault.TextView.SpinnerItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="GST"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/billTXT"
+        app:layout_constraintTop_toBottomOf="@+id/billTXT" />
+
+    <EditText
+        android:id="@+id/gstTXT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/billTXT"
+        app:layout_constraintStart_toStartOf="@+id/gstTV"
+        app:layout_constraintTop_toBottomOf="@+id/gstTV" />
+
+    <TextView
+        android:id="@+id/hstTV"
+        style="@android:style/Widget.DeviceDefault.TextView.SpinnerItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="HST"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/gstTXT"
+        app:layout_constraintTop_toBottomOf="@+id/gstTXT" />
+
+    <EditText
+        android:id="@+id/hstTXT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/gstTXT"
+        app:layout_constraintStart_toStartOf="@+id/hstTV"
+        app:layout_constraintTop_toBottomOf="@+id/hstTV" />
+
+    <TextView
+        android:id="@+id/tipPercentageTV"
+        style="@android:style/Widget.DeviceDefault.TextView.SpinnerItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Tip Percentage"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/hstTXT"
+        app:layout_constraintTop_toBottomOf="@+id/hstTXT" />
+
+    <EditText
+        android:id="@+id/tipPercentageTXT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/hstTXT"
+        app:layout_constraintStart_toStartOf="@+id/tipPercentageTV"
+        app:layout_constraintTop_toBottomOf="@+id/tipPercentageTV" />
+
+    <TextView
+        android:id="@+id/numberOfPeopleTV"
+        style="@android:style/Widget.DeviceDefault.TextView.SpinnerItem"
+        android:layout_width="197dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:text="Number of People"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tipPercentageTXT"
+        app:layout_constraintTop_toBottomOf="@+id/tipPercentageTXT" />
+
+    <EditText
+        android:id="@+id/numberOfPeopleTXT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/tipPercentageTXT"
+        app:layout_constraintStart_toStartOf="@+id/numberOfPeopleTV"
+        app:layout_constraintTop_toBottomOf="@+id/numberOfPeopleTV" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="287dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="48dp"
+        android:background="@drawable/buttons"
+        android:text="Back"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tipTV2"
+        app:layout_constraintStart_toStartOf="@+id/boxIV" />
+
+    <Button
+        android:id="@+id/calculateBtn"
+        android:layout_width="287dp"
+        android:layout_height="65dp"
+        android:background="@drawable/buttons"
+        android:text="Calculate"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/totalTV1"
+        app:layout_constraintStart_toStartOf="@+id/backBtn" />
+
+    <CheckBox
+        android:id="@+id/inclueTipCB"
+        style="@android:style/Widget.DeviceDefault.CompoundButton.CheckBox"
+        android:layout_width="227dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:buttonTint="@android:color/white"
+        android:text="Include Taxes in Tip"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/numberOfPeopleTXT"
+        app:layout_constraintTop_toBottomOf="@+id/numberOfPeopleTXT" />
+
+    <TextView
+        android:id="@+id/totalTV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="TOTAL:"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/amountTV1"
+        app:layout_constraintStart_toEndOf="@+id/calculateBtn" />
+
+    <TextView
+        android:id="@+id/amountTV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="$0.00"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/perTV1"
+        app:layout_constraintStart_toEndOf="@+id/totalTV1" />
+
+    <TextView
+        android:id="@+id/perTV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="/ per"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/boxIV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/amountTV1"
+        app:layout_constraintTop_toBottomOf="@+id/inclueTipCB" />
+
+    <TextView
+        android:id="@+id/tipTV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:text="TIP: "
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/amountTV2"
+        app:layout_constraintStart_toEndOf="@+id/backBtn" />
+
+    <TextView
+        android:id="@+id/amountTV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:text="$0.00"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/perTV2"
+        app:layout_constraintStart_toEndOf="@+id/tipTV2" />
+
+    <TextView
+        android:id="@+id/perTV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="8dp"
+        android:text="/ per"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/boxIV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/amountTV2"
+        app:layout_constraintTop_toBottomOf="@+id/perTV1" />
+
+</android.support.constraint.ConstraintLayout>

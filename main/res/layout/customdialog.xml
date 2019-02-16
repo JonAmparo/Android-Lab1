@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="641dp"
+        android:layout_height="822dp"
+        android:background="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/secretGoBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="50dp"
+            android:background="@android:color/holo_red_light"
+            android:padding="20dp"
+            android:text="Go Back"
+            android:textSize="24sp" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/logoIV"
+        android:layout_width="286dp"
+        android:layout_height="201dp"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout"
+        app:srcCompat="@drawable/logol" />
+
+    <TextView
+        android:id="@+id/murdaroTXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Murdaro"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/logoIV" />
+
+    <TextView
+        android:id="@+id/secretTXT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/holo_red_light"
+        android:text="My online alias has been &quot;Murdaro&quot; since 2011.  It's a mixture of one of my first online alias which was &quot;Murda&quot;.  &quot;Murda&quot; was given to me from a friend in 2009.  The second part of &quot;Murdaro&quot;, the &quot;Aro&quot; part comes from the ending half of my last name.  I combined the two,  to make something really personal to me.  Which is &quot;Murdaro&quot; :)."
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/murdaroTXT" />
+
+</android.support.constraint.ConstraintLayout>

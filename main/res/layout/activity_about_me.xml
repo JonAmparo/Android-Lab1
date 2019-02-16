@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutMe">
+
+    <ImageView
+        android:id="@+id/boxIV"
+        android:layout_width="0dp"
+        android:layout_height="423dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/boxes" />
+
+    <ImageView
+        android:id="@+id/profilePicIV"
+        android:layout_width="156dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/boxIV"
+        app:layout_constraintEnd_toStartOf="@+id/description"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="@+id/boxIV"
+        app:layout_constraintTop_toBottomOf="@+id/nameIV"
+        app:layout_constraintVertical_bias="0.189"
+        app:srcCompat="@drawable/logol" />
+
+    <ImageView
+        android:id="@+id/aboutMeIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/boxIV"
+        app:layout_constraintStart_toStartOf="@+id/boxIV"
+        app:layout_constraintTop_toTopOf="@+id/boxIV"
+        app:srcCompat="@drawable/aboutme" />
+
+    <ImageView
+        android:id="@+id/nameIV"
+        android:layout_width="215dp"
+        android:layout_height="34dp"
+        app:layout_constraintEnd_toEndOf="@+id/boxIV"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/boxIV"
+        app:layout_constraintTop_toBottomOf="@+id/aboutMeIV"
+        app:srcCompat="@drawable/jonathanampar" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Born in Washington D.C. The Nations capitol of the United States of America.  Growing up in a full house hold wasn't easy.  Fighting with older and younger siblings on the daily basis over who gets their turn to play or blaming each other for the mess that was made... or that something was broken."
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/boxIV"
+        app:layout_constraintEnd_toEndOf="@+id/boxIV"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="@+id/boxIV"
+        app:layout_constraintTop_toBottomOf="@+id/nameIV"
+        app:layout_constraintVertical_bias="0.146" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="164dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/buttons"
+        android:text="Back"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/boxIV"
+        app:layout_constraintEnd_toEndOf="@+id/boxIV"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/boxIV" />
+
+    <Button
+        android:id="@+id/secretBtn"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/buttons"
+        android:text="Secret"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/backBtn"
+        app:layout_constraintEnd_toEndOf="@+id/boxIV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/backBtn" />
+
+</android.support.constraint.ConstraintLayout>
